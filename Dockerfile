@@ -1,7 +1,7 @@
 FROM dockerfile/java:oracle-java7
 
 RUN wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | apt-key add - && \
-	echo "deb http://packages.elasticsearch.org/elasticsearch/1.4/debian stable main" | tee -a /etc/apt/sources.list.d/elasticsearch.list && \
+	echo "deb http://packages.elasticsearch.org/elasticsearch/1.5/debian stable main" | tee -a /etc/apt/sources.list.d/elasticsearch.list && \
 	apt-get update && apt-get install elasticsearch && \
 	mkdir -p /usr/share/elasticsearch/config && \
     ln -s /etc/elasticsearch/elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml && \
